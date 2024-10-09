@@ -1,13 +1,14 @@
+
 // Boss.js
 class Boss extends Opponent {
     constructor(game) {
-        super(game);  // Call the Opponent constructor
-        this.speed *= 2;  // Boss moves twice as fast
-        this.image.src = 'assets/boss.png';  // Use the boss image
+        this.speed *= 2;
+        this.myImage = 'assets/boss.png',
+        this.myImageDead = 'assets/boss_dead.png';
+       
+        // Call the parent class constructor with the boss's properties
+        super(game, width, height, x, y, speed, myImage, myImageDead);
     }
 
-    collide() {
-        super.collide();  // Call the parent's collide method
-        document.getElementById('game-over-image').src = 'assets/boss_dead.png';
-    }
+    // The shoot and collide methods can be inherited directly from the Opponent class.
 }
