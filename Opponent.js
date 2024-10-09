@@ -69,7 +69,12 @@ class Opponent extends Character {
                 this.game.removeOpponent();
             }, 2000);
             super.collide();
-            this.score = this.score + 1;
+                
+            // Increment score
+            this.game.score += 1;
+
+            // Update the score display
+            document.getElementById("scoreli").innerHTML = `Score: ${this.game.score}`;
         }
 
     }
