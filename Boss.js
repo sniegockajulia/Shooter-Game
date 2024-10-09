@@ -8,6 +8,6 @@ class Boss extends Opponent {
 
     collide() {
         super.collide();  // Call the parent's collide method
-        document.getElementById('game-over-image').src = 'assests/boss_dead.png';
+        document.getElementById('game-over-image').src = 'assets/boss_dead.png';
     }
 }
