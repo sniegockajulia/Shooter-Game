@@ -90,11 +90,13 @@ class Game {
     /**
      * Remove the opponent from the game
      */
-    removeOpponent () {
-        if (this.opponent) {
-            document.body.removeChild(this.opponent.image);
+    removeOpponent() {
+        if (this.opponent instanceof Opponent) {
+            this.opponent = new Boss(this);  // Replace with boss
+        } else {
+            this.opponent = undefined;  // No more opponents after the boss
+            this.endGame(true);  // Game won if boss is defeated
         }
-        this.opponent = new Opponent(this);
     }
 
     /**
