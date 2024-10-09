@@ -43,6 +43,8 @@ class Game {
 
             this.player = new Player(this);
             this.timer = setInterval(() => this.update(), 50);
+
+            document.getElementById("scoreli").innerHTML = this.score;
         }
     }
 
