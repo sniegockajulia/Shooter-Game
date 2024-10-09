@@ -5,4 +5,9 @@ class Boss extends Opponent {
         this.speed *= 2;  // Boss moves twice as fast
         this.image.src = 'assets/boss.png';  // Use the boss image
     }
+
+    collide() {
+        super.collide();  // Call the parent's collide method
+        document.getElementById('game-over-image').src = 'assets/boss_dead.png';
+    }
 }
