@@ -1,9 +1,8 @@
 // Boss.js
 class Boss extends Opponent {
     constructor(game) {
-        const speed = OPPONENT_SPEED * 2,
-            myImage = 'assets/boss.png',
-            myImageDead = 'assets/boss_dead.png';
-        super(game, width, height, x, y, speed, myImage, myImageDead);  // Call the Opponent constructor
+        super(game)
+        this.image.src = 'assets/boss.png';
+        this.myImageDead = 'assets/boss_dead.png';
     }
 }
