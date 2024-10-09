@@ -224,10 +224,12 @@ class Game {
         this.ended = true;
     
         // Check if the player has more than 0 lives (meaning they won)
-        let picture = (this.player.lives > 0) ? 'assets/you_win.png' : GAME_OVER_PICTURE;
-    
-        // Display the appropriate image
-        let gameOver = new Entity(this, this.width / 2, "auto", this.width / 4, this.height / 4, 0, picture);
+
+        if (this.player.lives > 0) {
+            let gameOver = new Entity(this, this.width / 2, "auto", this.width / 4, this.height / 4, 0, 'assets/you_win.png');
+        } else {
+            let gameOver = new Entity(this, this.width / 2, "auto", this.width / 4, this.height / 4, 0, GAME_OVER_PICTURE);
+        }
         gameOver.render();
     }
 
