@@ -91,12 +91,12 @@ class Game {
      * Remove the opponent from the game
      */
     removeOpponent() {
-    if (this.opponent instanceof Boss) {
-        this.endGame('win'); // End game if boss is defeated
-    } else {
-        this.opponent = new Boss(this); // Spawn the boss after defeating the triangle
+        if (this.opponent instanceof Boss) {
+            this.endGame('win'); // End game if boss is defeated
+        } else {
+            this.opponent = new Boss(this); // Spawn the boss after defeating the triangle
+        }
     }
-}
 
     /**
     * Checks which key the user is pressing
