@@ -92,7 +92,7 @@ class Game {
      */
     removeOpponent() {
         if (this.opponent instanceof Boss) {
-            this.endGame('win'); // End game if boss is defeated
+            this.endGame(); // End game if boss is defeated
         } else {
             document.body.removeChild(this.opponent.image);
             this.opponent = new Boss(this); // Spawn the boss after defeating the triangle
