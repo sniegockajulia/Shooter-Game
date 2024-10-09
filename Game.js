@@ -219,10 +219,14 @@ class Game {
     /**
      * End the game
      */
-    endGame () {
+    endGame(result) {
+        clearInterval(this.timer);
         this.ended = true;
-        let gameOver = new Entity(this, this.width / 2, "auto", this.width / 4, this.height / 4, 0, GAME_OVER_PICTURE)
-        gameOver.render();
+        if (result === 'win') {
+            document.getElementById('game-over-image').src = 'assets/you_win.png';
+        } else {
+            document.getElementById('game-over-image').src = 'assets/game_over.png';
+        }
     }
 
     /**
