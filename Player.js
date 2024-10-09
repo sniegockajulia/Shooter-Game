@@ -49,22 +49,10 @@ class Player extends Character {
      */
     collide() {
         if (!this.dead) {
-            this.lives--; // Reduce lives by 1 when hit
-            document.getElementById("livesli").innerHTML = `Lives: ${this.lives}`; // Update the lives display in UI
-
-            if (this.lives > 0) {
-                // Temporarily "kill" the player but revive after 2 seconds
-                this.dead = true; 
-                setTimeout(() => {
-                    this.dead = false; // Revive the player
-                    this.image.src = PLAYER_PICTURE; // Restore original image
-                }, 2000); // 2-second delay before reviving
-            } else {
-                // If no lives left, end the game
+            setTimeout(() => {
                 this.game.endGame();
-            }
-
-            super.collide(); // Call the parent's collide method (if needed)
+            }, 2000);
+            super.collide();
         }
     }
 }
