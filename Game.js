@@ -1,6 +1,7 @@
 /**
  * The game itself
  */
+
 class Game {
     /**
      * Initializes a game
