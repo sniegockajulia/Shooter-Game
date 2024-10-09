@@ -4,6 +4,6 @@ class Boss extends Opponent {
         super(game);
         this.image.src = 'assets/boss.png';
         this.myImageDead = 'assets/boss_dead.png';
-        this.speed = OPPONENT_SPEED * 2;
+        this.speed *= 10;
     }
 }
