@@ -17,6 +17,7 @@ class Game {
         this.opponentShots = []; // Shots fired by the opponent
         this.xDown = null; // Position where the user touched the screen
         this.paused = false; // Indicates whether the game is paused
+        this.score = 0; // Score in the game
     }
 
 
