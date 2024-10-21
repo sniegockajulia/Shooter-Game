@@ -57,7 +57,7 @@ class Player extends Character {
                 super.collide();
                 setTimeout(() => {
                     this.dead = false; // Revive the player
-                    this.image.src = this.myImage; // Restore original image
+                    this.image.src = PLAYER_PICTURE; // Restore original image
                 }, 2000); // 2-second delay before reviving
             } else {
                 // If no lives left, end the game
