@@ -1,6 +1,7 @@
 
 ## Practice with Classes, Booleans, Strings, and Event Handling
 
+https://github.com/sniegockajulia/Shooter-Game
 
 In this assignment, we are going to develop a complete game using HTML, CSS, and JavaScript. The game is a classic shooting game where we control our character (a square) using the arrow keys or touch screen. The objective of the game is to shoot a series of shapes that will appear on the screen and turn them into stars, while dodging their shots. To start the development, we will use the basic version of the game, for which we provide the code.
 
